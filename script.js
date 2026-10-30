@@ -1,10 +1,8 @@
-// Step 1: Basic math functions. Try add(2, 3) in the browser console.
 function add(a, b) { return a + b; }
 function subtract(a, b) { return a - b; }
 function multiply(a, b) { return a * b; }
 function divide(a, b) { return a / b; }
 
-// Step 2: Choose the math function based on the operator.
 function operate(operator, a, b) {
   if (operator === "+") return add(a, b);
   if (operator === "-") return subtract(a, b);
@@ -13,7 +11,6 @@ function operate(operator, a, b) {
   return null;
 }
 
-// Step 3: Store the calculator's current values.
 const display = document.getElementById("display");
 let displayValue = "0";
 let firstNumber = null;
@@ -108,7 +105,6 @@ function backspace() {
   updateDisplay();
 }
 
-// Step 4: Handle button clicks.
 document.querySelectorAll("button").forEach(function (button) {
   button.addEventListener("click", function () {
     const action = button.dataset.action;
@@ -121,7 +117,6 @@ document.querySelectorAll("button").forEach(function (button) {
   });
 });
 
-// Step 5: Keyboard support.
 document.addEventListener("keydown", function (event) {
   const key = event.key;
   if (key >= "0" && key <= "9" && key.length === 1) inputNumber(key);
